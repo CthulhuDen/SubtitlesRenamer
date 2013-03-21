@@ -1,14 +1,14 @@
+#! /usr/bin/env python 
+
 from os import *
 import string,re
 
 print "Welcome user!\nYou may choose some options below but beware!\nAll changes are irreversible so take care!"
 
 def checkOnZero(a,n):
-	if a!='':
-		return a
-	else:
-		a=[r'(\d+).(\d+)','.avi','.srt']
-		return a[n]
+	if a=='':
+		a=([r'(\d+).(\d+)','.avi','.srt'])[n]
+	return a
 		
 a=[r"Now enter media file pattern (empty for '(\d+).(\d+)'): ",
 r"Media file extension (empty for '.avi'): ",
@@ -51,12 +51,12 @@ def processdir(wdir):
 									print ""
 								else:
 									print("Not copied, file exists.\n")
-if not raw_input("Ok, now it is your very last chance to enter \"cancel\"\n")=="cancel":
+if not raw_input("Ok, now it is your very last chance to enter \"cancel\"\n").lower()=="cancel":
 	c=0
 	processdir(curdir)
 	
 if c>=0:
-	print c,"files was processed."
+	print c,"files were processed."
 	
-print "Cthulhu 2011"
-system("pause")
+print "Cthulhu 2011-2013"
+#system(r"echo 'press any key to continue...' ; read -n 1 ;")
