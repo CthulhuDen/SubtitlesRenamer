@@ -59,4 +59,4 @@ if c>=0:
 	print c,"files were processed."
 	
 print "Cthulhu 2011-2013"
-system("pause")
+#system(r"echo 'press any key to continue...' ; read -n 1 ;")
